@@ -1,2 +1,2 @@
 # webslides_lab
-Presentation of LHiCo's work, using webslide.tv tool, based on HTML5
+Repository for the presentation created to the 2019 STO, showing the works and projects from the Coastal Hydrodynamics Lab, with the Webslide.TV project, based on HTML5.
