@@ -154,14 +154,11 @@
           <!-- .end .embed -->
         </section>
 
-
-
         <section class="fullscreen aligncenter">
           <div class="card-50">
             <div class="embed" style="width:40%">
               <span style="margin-bottom:-10px;margin-top:10px">Polito e Sato (2018)</span>
-              <video autoplay loop width="320" height="240">
-               <source src="videos/glider2.mp4" type="video/mp4">
+              <video src="videos/glider2.mp4" type="video/mp4" autoplay loop autobuffer width="320" height="240">
              </video>
            </div>
             <div class="flex-content">
@@ -170,7 +167,7 @@
               </div>
               <ul style="list-style: none;">
                 <li>
-                    Temperatura, salinidade, turbidez, CDOM, fluorescência (clorofila-a)
+                    T/S, Turbidez/CDOM/Fluorescência
                 </li>
                 <li>Resolução de 1 dado/s</li>
                 <li> 9 perfis vertical / dia => 40 dias = <b>360 Perfis!</b> </li>
@@ -242,26 +239,57 @@
           </div>
         </section>
 
+        <section class="fullscreen aligncenter">
+          <div class="card-50">
+            <div class="embed" style="width:40%">
+              <video src="videos/dispersion_tritium.mp4" type="video/mp4" autoplay loop autobuffer>
+              </video>
+           </div>
+            <div class="flex-content">
+              <div class="wrap">
+                <h3>Densidade de dados enorme!</h3>
+              </div>
+              <ul style="list-style: none;">
+                <li>
+                    T/S, Turbidez/CDOM/Fluorescência
+                </li>
+                <li>Resolução de 1 dado/s</li>
+                <li> 9 perfis vertical / dia => 40 dias = <b>360 Perfis!</b> </li>
+                <li>Custo x Benefício</li>
+              </ul>
+              <!-- <span style="margin-top:50px;padding-bottom:50px">
+                e as possibilidades do que podemos estudar com esta quantidade de
+                informação é ainda maior.</span> -->
+
+              <div class="wrap">
+                <img src="figures/ru29.jpg">
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="bg-blue">
           <div class="wrap">
             <h3>Produtos do trabalho de modelagem</h3>
             <ul class="flexblock gallery">
               <li>
-                <div class="embed">
-                  <video autoplay loop>
-                   <source src="videos/dispersion_tritium.mp4" type="video/mp4">
-                 </video>
-               </div>
-                <!-- <div class="embed">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/-kLKh9SGwKE?rel=0&amp;controls=0&amp;mute=1?&autoplay=1"  allowfullscreen></iframe>
-                </div> -->
+
+                <h4>Dispersão de:</h4>
+                <h5>Material Nuclear</h5>
+                <h5>Coliformes Fecais</h5>
+
+                <h4>Caracterização da circulação:</h4>
+                <h5>Plataforma Continental Sergipe/Alagoas</h5>
+                <h5>Enseada do Flamengo</h5>
+
+                <h4>Avaliação do potencial energético</h4>
+                <h5>para extração de energia de onda</h5>
+
               </li>
               <li>
-              <!-- <img src="videos/dispersion_coliformes.gif" alt=""> -->
                 <div class="embed">
-                  <video autoplay loop>
-                   <source src="videos/dispersion_coliformes.mp4" type="video/mp4">
-                 </video>
+                  <video src="videos/dispersion_tritium.mp4" type="video/mp4" autoplay loop autobuffer>
+                  </video>
                </div>
               </li>
             </ul>
@@ -275,12 +303,18 @@
           </div>
         </section>
 
-        <section>
+        <section class="fullscreen bg-white aligncenter">
+          <span class="background dark" style="background-image:url('figures/alcatrazes.jpg')"></span>
+          <div class="wrap aligncenter fadeInUp slow">
+            <img class="aligncenter size-50" src="figures/mindmap.png" alt="Parceiros">
+          </div>
+        </section>
+
+        <!-- <section>
           <div class="wrap">
             <img class="aligncenter size-50" src="figures/mindmap.png" alt="Parceiros">
           </div>
-          <!-- .end .wrap -->
-        </section>
+        </section> -->
 
         <section>
           <div class="card-50">
@@ -308,6 +342,18 @@
     <script src="static/js/webslides.js"></script>
     <script>
       window.ws = new WebSlides();
+      video_count =1;
+      videoPlayer = document.getElementById("homevideo");
+
+      function run(){
+              video_count++;
+              if (video_count == 4) video_count = 1;
+              var nextVideo = "app/video"+video_count+".mp4";
+              videoPlayer.src = nextVideo;
+              videoPlayer.play();
+         };
+
+
     </script>
 
     <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
